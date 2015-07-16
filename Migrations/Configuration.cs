@@ -27,6 +27,14 @@ namespace EntityFrameworkDemo.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            var students = new Student { Name = "Pranay", Phone = "2783933", Address = "NYC", DateOfBirth = new DateTime(1991, 12, 09), Course = "Introduction to Software Engineering", Description = "None" };
+            var test = new Student { Name = "test", Phone = "278000", Address = "test city", DateOfBirth = new DateTime(1990, 7, 8), Course = "Inroduction to Testing", Description = "None" };
+
+            context.Students.Add(students);
+            context.Students.Add(test);
+            context.SaveChanges();
+        
         }
     }
 }

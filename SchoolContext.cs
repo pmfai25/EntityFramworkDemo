@@ -14,7 +14,12 @@ namespace EntityFrameworkDemo
              * 
              * Handled by code based migration. Primary use for auto migrations when model changes
              * uses SchoolDbInitializer inherited and override from DropCreateDatabaseIfModelChanges
-             * Database.SetInitializer<SchoolContext>(new SchoolDbInitializer());*/
+             * Impotant!: normally should be invoked before instantiation of school context
+             * 
+             */
+
+            Database.SetInitializer<SchoolContext>(new SchoolDbInitializer());
+             
 
         }
 

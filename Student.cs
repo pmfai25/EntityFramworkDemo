@@ -11,10 +11,15 @@ namespace EntityFrameworkDemo
         }
 
         public  int ID { get; set; }
+        [MaxLength(50)]
         public string Name { get; set; }
+        [MaxLength(20)]
         public string Phone { get; set; }
+        [MaxLength(50)]
         public string Address { get; set; }
+        [MaxLength(60)]
         public string Course { get; set; }
+        [MaxLength(50)]
         public string Description { get; set; }
 
         [DataType(DataType.Date)]

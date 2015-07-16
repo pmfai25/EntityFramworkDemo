@@ -61,6 +61,10 @@
     <Compile Include="Migrations\201507160136019_AddDescription.Designer.cs">
       <DependentUpon>201507160136019_AddDescription.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201507161247322_AutomaticMigration.cs" />
+    <Compile Include="Migrations\201507161247322_AutomaticMigration.Designer.cs">
+      <DependentUpon>201507161247322_AutomaticMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201507160136019_AddDescription.resx">
       <DependentUpon>201507160136019_AddDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507161247322_AutomaticMigration.resx">
+      <DependentUpon>201507161247322_AutomaticMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

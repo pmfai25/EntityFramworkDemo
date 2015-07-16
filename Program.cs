@@ -14,24 +14,37 @@ namespace EntityFrameworkDemo
         {
             Console.WriteLine("hello world. This is Entity framework.");
 
-           // Database.SetInitializer(new DropCreateDatabaseAlways<SchoolContext>());
+          
             using (var ctx = new SchoolContext())
             {
-             //   new SchoolDbInitializer().InitializeDatabase(ctx);
 
              //  ctx.Database.Initialize(false);
-                Console.WriteLine("Adding student to database using school context.");
+               
+                Student s = new Student();
+                
+                Console.Write("Enter Student Details");
+                Console.Write("Name: ");
+                s.Name = Console.ReadLine().ToString();
 
-              /*  Student stud = new Student() {StudentName = "James", DateOfBirth = new DateTime(1991-09-12), Phone = "0420617679"};              
-                var stud = new Student { Name = "stud", Phone = "290909", Address = "stud city", DateOfBirth = new DateTime(1990, 1, 1).Date };          
-                ctx.Students.Add(stud);
+                Console.Write("Phone: ");
+                s.Phone = Console.ReadLine().ToString();
+
+                Console.Write("Address: ");
+                s.Address = Console.ReadLine().ToString();
+
+                Console.Write("Course: ");
+                s.Course = Console.ReadLine().ToString();
+                
+                Console.Write("Description: ");
+                s.Description = Console.ReadLine().ToString();
+
+                s.DateOfBirth= new DateTime(1990,12,01);
+                ctx.Students.Add(s);
                 ctx.SaveChanges();
-               */
-                
-                
-                var query = from s in ctx.Students
-                    orderby s.Name
-                    select s;
+
+                var query = from st in ctx.Students
+                    orderby st.Name
+                    select st;
 
                 Console.WriteLine("Students in Student context");
 
@@ -40,6 +53,7 @@ namespace EntityFrameworkDemo
                     Console.WriteLine(item.Name);
                 }
 
+                Console.ReadLine();
             }
         }
     }
